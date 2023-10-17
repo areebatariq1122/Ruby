@@ -1,52 +1,51 @@
-# require 'byebug'
+#require 'byebug'
+#Arrays, Strings & Hash
+num = [1,2,3]
+name = ["areeba", "aaaa" , "bbbbb"]
+num = Array.new([1,2,3])
+puts "#{num}"
+puts num
+print num
 
-# # Arrays
+#########################################
+a= [1,2,3]
+b= {name: "areeba", age: "22"}
+c= "Areeba Tariq"
+puts a.class
+puts b.class
+puts c.class
+########################################
 
-# # num = [1,2,3]
-# # name = ["areeba", "aaaa" , "bbbbb"]
-# # num = Array.new([1,2,3])
-# # puts "#{num}"
-# # # puts num
-# # print num
+grades = Hash.new
+grades.default = "Improve"
+grades[10] = "A+"
+grades[9] = "A"
+grades[8] = "B+"
 
-# # a= [1,2,3]
-# # b= {name: "areeba", age: "22"}
-# # c= "Areeba Tariq"
-# # puts a.class
-# # puts b.class
-# # puts c.class
+puts grades.size
+###############################################################
+            Task 1: Find Currency of given country
+###############################################################
 
-# # grades = Hash.new
-# # grades.default = "Improve"
-# # grades[10] = "A+"
-# # grades[9] = "A"
-# # grades[8] = "B+"
+world = [{name:"Pakistan", dialingcode: "+92", currency: "PKR", religion: "Muslim", Atomicpower: "Yes", capital: "Islamabad"}, 
+        {name: "India", dialingcode: "+91", currency: "INR", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Delhi"}, 
+        {name: "Korea", dialingcode: "+82", currency: "Won", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Seoul"}, 
+        {name: "Saudi Arab", dialingcode: "+966", currency: "Saudi Riyal", religion: "Muslim", Atomicpower: "Yes", capital: "Riyadh"}, 
+        {name: "America", dialingcode: "+1", currency: "Dollars", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Washington"}]
 
-# # puts grades.size
+world.each do |hash|
+  byebug
+  if hash[:name] == "Pakistan"
+    puts hash[:currency]
+    break
+  else
+    puts "not found"
+  end
+end
 
-# # country1 = {name: "Pakistan", dialingcode: "+92", currency: "PKR", religion: "Muslim", Atomicpower: "Yes", capital: "Islamabad"}
-# # country2 = {name: "India", dialingcode: "+91", currency: "INR", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Delhi"}
-# # country3 = {name: "Korea", dialingcode: "+82", currency: "Won", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Seoul"}
-# # country4 = {name: "Saudi Arab", dialingcode: "+966", currency: "Saudi Riyal", religion: "Muslim", Atomicpower: "Yes", capital: "Riyadh"}
-# # country5 = {name: "America", dialingcode: "+1", currency: "Dollars", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Washington"}
-
-# world = [{name:"Pakistan", dialingcode: "+92", currency: "PKR", religion: "Muslim", Atomicpower: "Yes", capital: "Islamabad"}, {name: "India", dialingcode: "+91", currency: "INR", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Delhi"}, {name: "Korea", dialingcode: "+82", currency: "Won", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Seoul"}, {name: "Saudi Arab", dialingcode: "+966", currency: "Saudi Riyal", religion: "Muslim", Atomicpower: "Yes", capital: "Riyadh"}, {name: "America", dialingcode: "+1", currency: "Dollars", religion: "Non-Muslim", Atomicpower: "Yes", capital: "Washington"}]
-# find = ["korea", "india"]
-
-# world.each do |hash|
-#   byebug
-#   if hash[:name] == find[0]
-#     puts hash[:currency]
-#     break
-#   else
-#     puts "no"
-#   end
-# end
-
-# # end
-# # ["pakistan", "Korea", "india"]
-
-# # country = [{}, {}, {}]
+###############################################################
+            Task 2: Authentication (Simple)
+###############################################################
 
 
 users = [
@@ -111,3 +110,4 @@ if wrong_attempts == 3
 else
   puts 'you are exited now'
 end
+
